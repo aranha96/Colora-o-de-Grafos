@@ -52,3 +52,4 @@ def GraphColoringGrade(G):
     c = [-1]*len(G.vertices())
     g = G.grade()
     #utilizar a function max
+    #ordenar lista de vertices com base no grau
