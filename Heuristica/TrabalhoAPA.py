@@ -52,31 +52,8 @@ def GraphColoring(G):
                  c[v] = c[v] + 1
         
      return c
-         
-def GraphColoringGrade(G):
-    c = [-1]*len(G.vertices())
-    g = G.grade()
-    #utilizar a function max
-    #ordenar lista de vertices com base no grau
-    #fica pra depois
 
 def VND(G, color):
-    busca = max(color)
-    nova = 0
-    
-    while(busca > 1):        
-        for v in color:
-            if (color[v] == busca):
-                while(nova < busca):
-                    color[v] = nova
-                    if (G.safe(v, color)):
-                        nova = busca
-                    else:
-                        nova = nova + 1
-        busca = busca - 1
-        nova = 0
-
-def VND1(G, color):
     busca = max(color)
     nova = 0
     
@@ -89,16 +66,14 @@ def VND1(G, color):
                     nova = busca + 1
                 else:
                     nova = nova + 1
+                  
+
     
            
                 
-
 cor = GraphColoringBad(g)
 VND1(g, cor)
-VND1(g, cor)
-VND1(g, cor)
-VND1(g, cor)
-VND1(g, cor)
-print(cor)
+
+
 
 
