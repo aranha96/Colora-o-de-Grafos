@@ -1,3 +1,5 @@
+import random
+
 def MVI(G, color):
     busca = max(color)
     nova = 0
@@ -26,6 +28,16 @@ def GraphColoring(G):
         
      return c
 
+def CheckSolution(oldSolution, color):
+    newSolution = max(color) + 1
+    
+    if (newSolution < oldSolution):
+        print("Solucao melhorada")
+    else:
+        print("Nao ocorreu melhora")
+
+#Treino com lista de listas
+    
 lista1 = [1,2,3,5,6,8,7,9]
 lista2 = [2,5,8,3,6,9]
 
@@ -34,4 +46,16 @@ listalista = []
 listalista.append(lista1)
 listalista.append(lista2)
 
-print(listalista)
+#Treino com numeros aleatorios
+
+while(lista1):
+    
+    v = random.choice(lista1)
+    lista1.remove(v)
+
+#Treino para o filtro
+
+filtro = int(len(lista2) - (len(lista2)*0.5))
+seg1 = lista2[0:filtro]
+seg2 = lista2[filtro:len(lista2)]
+
