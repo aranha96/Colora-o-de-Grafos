@@ -1,5 +1,5 @@
 import random
-from GrafosTeste import europa
+from GrafosTeste import graph_dict3
 from GrafosTeste import graph_dict1
 
 class Graph:
@@ -32,7 +32,8 @@ class Graph:
 
         return vg
                             
-g = Graph(graph_dict1)
+g1 = Graph(graph_dict1)
+g2 = Graph(graph_dict3)
 
 def GraphColoringBad(G):
     c = [-1]*len(G.vertices())#iniciliza o array de cores com -1, que significa sem cor
